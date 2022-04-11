@@ -1,0 +1,88 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  text-align: center;
+  font-size: 1.3rem;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: white;
+
+  height: 150vh;
+
+  background:linear-gradient(120deg, #626c76, #aac3cd) no-repeat;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+header {
+
+}
+
+footer {
+
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+input {
+  width: 200px;
+  margin: 15px;
+}
+
+button {
+  margin: 20px auto;
+  display: block;
+  padding: 5px;
+  background-color: #626c76;
+  border-color: none;
+  color: white;
+  /* box-shadow: 2px 2px 3px #ddd; */
+}
+
+button:hover {
+  background: #aac3cd; 
+  color: #626c76
+}
+
+img {
+  max-height: 300px
+}
+
+table {
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 5px;
+  background: #626c76
+}
+
+th, td {
+  border: 1px solid;
+  padding: 5px;
+  background: #aac3cd;
+  color: #626c76
+}
+
