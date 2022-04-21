@@ -110,7 +110,6 @@ class ProductInfo {
       }
     }
   }
-
   // DISPLAY MACROS FUNCTION
   showMacros() {
     let tableRef = document.querySelector('#macros-table')
