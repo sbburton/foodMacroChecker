@@ -101,8 +101,8 @@ class ProductInfo {
         let newVCell = newRow.insertCell(1)
 
         // get ingredients and vegetarian statuses (stati?)
-        let newIText = document.createTextNode(this.ingredients[key].text) 
-        let vegStatus = this.ingredients[key].vegetarian
+        let newIText = document.createTextNode(this.ingredients[key].text)
+        let vegStatus = this.ingredients[key].vegetarian || "unknown"
         let newVText = document.createTextNode(vegStatus)
 
         newICell.appendChild(newIText)
