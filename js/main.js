@@ -77,7 +77,9 @@ class ProductInfo {
     this.proteins = productData.nutriments.proteins_serving
     this.proteinsUnit = productData.nutriments.proteins_unit
 
-    this.calories =productData.nutriments.energy_serving
+    this.calories =
+    
+    productData.nutriments.energy_serving
   }
 
   showInfo() {
