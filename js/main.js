@@ -22,36 +22,14 @@ function getFetch() {
     .then(data => {
       console.log('all API data.product', data.product) // <- all data
       const item = new ProductInfo(data.product)
-
-      // healthy grades and leves
-      console.log(data.product.nutriscore_grade)
-      console.log(data.product.nutrient_levels)
-
-      // calories per serving
-      console.log(data.product.nutriments.energy_serving)
-
-      // macros per serving
-      console.log(data.product.nutriments.carbohydrates_serving)
-      console.log(data.product.nutriments.carbohydrates_unit)
-      console.log(data.product.nutriments.fat_serving)
-      console.log(data.product.nutriments.fat_unit)
-      console.log(data.product.nutriments.proteins_serving)
-      console.log(data.product.nutriments.proteins_unit)
       
       // call additional stuff if ingredients found
       if (data.status === 1) {
         
-        // display image and name
         item.showInfo()
-        
-        // self check
-        // console.log('item.ingredients', item.ingredients)
-
         item.showMacros()
-
-        // show all ingredients of item
         item.showIngredients()
-
+        
       } else if (data.status === 0) {
         alert(`Product ${inputVal} not found`)
       }
@@ -77,9 +55,8 @@ class ProductInfo {
     this.proteins = productData.nutriments.proteins_serving
     this.proteinsUnit = productData.nutriments.proteins_unit
 
-    this.calories =
-    
-    productData.nutriments.energy_serving
+
+    this.calories = productData.nutriments.energy_serving
   }
 
   showInfo() {
@@ -112,7 +89,7 @@ class ProductInfo {
       }
     }
   }
-  // DISPLAY MACROS FUNCTION
+
   showMacros() {
     let tableRef = document.querySelector('#macros-table')
 
